@@ -5,6 +5,7 @@
         xmlns:ignore="http://www.ignore.com"
         xmlns:local="clr-namespace:ProbeDesigner"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:ProbeDesigner.Model"
         Title="MVVM Light Application"
         Width="600"
         Height="300"
@@ -16,30 +17,30 @@
                 <ResourceDictionary Source="..\Skins\MainSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+
     </Window.Resources>
 
     <Window.DataContext>
         <Binding Path="Main" Source="{StaticResource Locator}" />
     </Window.DataContext>
 
+
+
     <Grid x:Name="LayoutRoot">
         <DockPanel>
 
             <local:MenuControl DockPanel.Dock="Top" />
-            <ListBox MinWidth="150" DockPanel.Dock="Left" />
 
-            <TextBlock HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       DockPanel.Dock="Top"
-                       FontSize="36"
-                       FontWeight="Bold"
-                       Foreground="Purple"
-                       Text="{Binding WelcomeTitle}"
-                       TextWrapping="Wrap" />
+            <TreeView MinWidth="150" DockPanel.Dock="Left" />
+
+            <TextBlock DockPanel.Dock="Top"
+                       Style="{DynamicResource HeadlineStyle}"
+                       Text="{Binding WelcomeTitle}" />
 
             <TextBlock DockPanel.Dock="Top"
                        Style="{DynamicResource HeadlineStyle}"
                        Text="{Binding NomenclatureTitle}" />
         </DockPanel>
     </Grid>
+
 </Window>
