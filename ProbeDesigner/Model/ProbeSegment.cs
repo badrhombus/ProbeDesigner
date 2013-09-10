@@ -1,27 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace RevolutionProbe.Model
+﻿namespace ProbeDesigner.Model
 {
     public class ProbeSegment
     {
-        private string _segment;
-        private bool _isComplement;
         private int _gc;
+        private bool _isBridge;
+        private bool _isComplement;
+        private string _segment;
         private int _tm;
 
-        public string Segment
-        {
-            get { return _segment; }
-            set { _segment = value; }
-        }
-
-        public ProbeSegment(string segment, bool isComplement=false)
+        public ProbeSegment(string segment, bool isComplement = false)
         {
             _segment = segment;
             _isComplement = isComplement;
+        }
+
+        public int GC
+        {
+            get { return _gc; }
+        }
+
+        public bool IsBridge
+        {
+            get { return _isBridge; }
+            set { _isBridge = value; }
         }
 
         public bool IsComplement
@@ -30,9 +31,10 @@ namespace RevolutionProbe.Model
             set { _isComplement = value; }
         }
 
-        public int GC
+        public string Segment
         {
-            get { return _gc; }
+            get { return _segment; }
+            set { _segment = value; }
         }
 
         public int TM

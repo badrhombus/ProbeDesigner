@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
 using ProbeDesigner.Model;
+using ProbeDesigner.Service;
 using ReactiveUI;
 
 namespace ProbeDesigner.ViewModel
@@ -64,6 +65,9 @@ namespace ProbeDesigner.ViewModel
             OpenNomenclatureCommand = new ReactiveCommand();
             OpenNomenclatureCommand.RegisterAsyncAction(_ => OpenNomenclature());
 
+            OpenProbesCommand = new ReactiveCommand();
+            OpenProbesCommand.RegisterAsyncAction(_ => OpenProbes());
+
         }
 
         private object OpenNomenclature()
@@ -71,6 +75,17 @@ namespace ProbeDesigner.ViewModel
             Thread.Sleep(5000);
             return null;
         }
+
+        private object OpenProbes()
+        {
+            Thread.Sleep(15000);
+            return null;
+        }
+
+
+        public ReactiveCommand OpenProbesCommand
+        { get; private set; }
+
 
         public ReactiveCommand OpenNomenclatureCommand
         { get; private set; }

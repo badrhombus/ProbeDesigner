@@ -26,6 +26,7 @@
         <DockPanel>
 
             <local:MenuControl DockPanel.Dock="Top" />
+            <ListBox MinWidth="150" DockPanel.Dock="Left" />
 
             <TextBlock HorizontalAlignment="Center"
                        VerticalAlignment="Center"
@@ -33,7 +34,8 @@
                        FontSize="36"
                        FontWeight="Bold"
                        Foreground="Purple"
-                       Text="{Binding WelcomeTitle}" />
+                       Text="{Binding WelcomeTitle}"
+                       TextWrapping="Wrap" />
 
             <TextBlock DockPanel.Dock="Top"
                        Style="{DynamicResource HeadlineStyle}"

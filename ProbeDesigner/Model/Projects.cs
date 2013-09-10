@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace RevolutionProbe.Model
+namespace ProbeDesigner.Model
 {
     public class Projects
     {

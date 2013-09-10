@@ -1,6 +1,7 @@
 ﻿using System;
+using ProbeDesigner.Model;
 
-namespace ProbeDesigner.Model
+namespace ProbeDesigner.Service
 {
     public class DataService : IDataService
     {

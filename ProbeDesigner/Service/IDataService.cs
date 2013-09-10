@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using ProbeDesigner.Model;
 
-namespace ProbeDesigner.Model
+namespace ProbeDesigner.Service
 {
     public interface IDataService
     {

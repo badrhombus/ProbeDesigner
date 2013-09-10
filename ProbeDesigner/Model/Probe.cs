@@ -2,13 +2,14 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using RevolutionProbe.Common;
+using RevolutionProbe.Model;
 
-namespace RevolutionProbe.Model
+namespace ProbeDesigner.Model
 {
     [Serializable]
     public class Probe
     {
-        private static readonly Regex _reProbe = new Regex(
+        private readonly Regex _reProbe = new Regex(
             "(?<alpha>\\D+)(?<digits>\\d+)(?<suffix1>\\D+)*($|(-((?<rev>\\d+)(?<suffix2>\\D+)*)*)+)",
             RegexOptions.CultureInvariant | RegexOptions.Compiled);
 
@@ -46,7 +47,7 @@ namespace RevolutionProbe.Model
             get
             {
                 if (_group != null) return _group;
-                if (suffix == null) ParseProbeName();
+                if (Suffix == null) ParseProbeName();
                 return _group;
             }
             set { _group = value; }
@@ -57,8 +58,8 @@ namespace RevolutionProbe.Model
             get
             {
                 if (_isGap != null) return (bool) _isGap;
-                if (suffix == null) return false;
-                return (bool) (_isGap = suffix.Contains("G"));
+                if (Suffix == null) return false;
+                return (bool) (_isGap = Suffix.Contains("G"));
             }
             set { _isGap = value; }
         }
@@ -69,8 +70,8 @@ namespace RevolutionProbe.Model
             {
                 if (_isTandem != null) return (bool) _isTandem;
 
-                if (suffix == null) return false;
-                return (bool) (_isTandem = suffix.Contains("T"));
+                if (Suffix == null) return false;
+                return (bool) (_isTandem = Suffix.Contains("T"));
             }
             set { _isTandem = value; }
         }
@@ -80,13 +81,13 @@ namespace RevolutionProbe.Model
             get
             {
                 if (_isReverseComplement != null) return (bool) _isReverseComplement;
-                if (suffix == null) return false;
-                return (bool) (_isReverseComplement = suffix.Contains("C"));
+                if (Suffix == null) return false;
+                return (bool) (_isReverseComplement = Suffix.Contains("C"));
             }
             set { _isReverseComplement = value; }
         }
 
-        private string suffix
+        public string Suffix
         {
             get
             {

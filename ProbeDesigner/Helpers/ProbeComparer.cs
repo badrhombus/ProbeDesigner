@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using ProbeDesigner.Model;
 using RevolutionProbe.Model;
 
 namespace RevolutionProbe.Common
@@ -29,5 +30,6 @@ namespace RevolutionProbe.Common
             result = String.CompareOrdinal(matchX.Groups["suffix2"].Value, matchY.Groups["suffix2"].Value);
             return result;
         }
+
     }
 }

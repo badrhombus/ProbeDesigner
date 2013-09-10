@@ -13,6 +13,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using ProbeDesigner.Model;
+using ProbeDesigner.Service;
 
 namespace ProbeDesigner.ViewModel
 {

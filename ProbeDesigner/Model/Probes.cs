@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RevolutionProbe.Model
+namespace ProbeDesigner.Model
 {
     public class Probes
     {

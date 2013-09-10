@@ -7,6 +7,7 @@
         <Setter Property="Background" Value="{x:Null}" />
         <Setter Property="Foreground" Value="Purple" />
         <Setter Property="FontSize" Value="36" />
+        <Setter Property="TextWrapping" Value="WrapWithOverflow" />
     </Style>
 
 </ResourceDictionary>

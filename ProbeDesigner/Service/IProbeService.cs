@@ -1,6 +1,8 @@
 ﻿using System;
+using ProbeDesigner.Model;
+using RevolutionProbe.Model;
 
-namespace RevolutionProbe.Model
+namespace ProbeDesigner.Service
 {
     public interface IProbeService
     {

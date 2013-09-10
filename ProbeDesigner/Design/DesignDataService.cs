@@ -1,5 +1,6 @@
 ﻿using System;
 using ProbeDesigner.Model;
+using ProbeDesigner.Service;
 
 namespace ProbeDesigner.Design
 {

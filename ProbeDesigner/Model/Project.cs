@@ -1,4 +1,4 @@
-﻿namespace RevolutionProbe.Model
+﻿namespace ProbeDesigner.Model
 {
     public class Project
     {
